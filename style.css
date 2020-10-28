@@ -1,0 +1,87 @@
+/* ROBOT.GIF from Giphy - https://giphy.com/gifs/robot-cinema-4d-eyedesyn-3o7abtn7DuREEpsyWY */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #45badd;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  background-image: url(./robot.gif);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: contain;
+}
+
+button,
+#loader,
+#playing {
+  outline: none;
+  width: 200px;
+  height: 50px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+  color: white;
+  background-color: #ff3482;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 2px 2px 20px 10px rgba(0,0,0,0.2);
+  transition: all 0.1s;
+}
+
+#loader {
+  filter: brightness(30%);
+}
+
+#loader img {
+  width: 100%;
+  height: 100%;
+}
+
+#playing {
+  text-align: center;
+  padding-top: 15px;
+  filter: brightness(30%);
+}
+
+button:hover {
+  cursor: pointer;
+  filter: brightness(95%);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+button:disabled {
+  cursor: default;
+  filter: brightness(30%);
+}
+
+/* Media Query: Tablet or Smaller */
+@media only screen and (max-width: 62.5em) {
+  .container {
+    background-size: cover;
+    background-position: center;
+  }
+
+  button {
+    box-shadow: 5px 5px 30px 20px rgba(0,0,0,0.5);
+  }
+}
